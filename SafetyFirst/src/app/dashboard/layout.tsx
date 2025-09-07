@@ -4,10 +4,11 @@ import { SidebarProvider, SidebarInset } from "@/components/ui/sidebar"
 export default function DashboardLayout({ children }: { children: React.ReactNode }) {
   return (
     <SidebarProvider className="dark">
-      <AppSidebar />
+      <AppSidebar/>
       <SidebarInset className="text-white">
         {children}
       </SidebarInset>
     </SidebarProvider>
+    
   )
 }
