@@ -1,0 +1,35 @@
+[
+  {
+    "question": "What is the strongest type of password?",
+    "options": [
+      "Your birthday",
+      "123456",
+      "A mix of letters, numbers, and symbols",
+      "Your pet's name"
+    ],
+    "answer": 2,
+    "explanation": "Strong passwords use a mix of uppercase, lowercase, numbers, and special characters. Avoid predictable choices like birthdays or pet names."
+  },
+  {
+    "question": "What does 2FA stand for?",
+    "options": [
+      "Two-Factor Authentication",
+      "Two-Faced Attack",
+      "Fast Access",
+      "Firewall Authorization"
+    ],
+    "answer": 0,
+    "explanation": "2FA (Two-Factor Authentication) adds an extra layer of security by requiring a second verification step, such as a text code or app approval."
+  },
+  {
+    "question": "Which of these is a common type of phishing attempt?",
+    "options": [
+      "An email asking you to reset your bank password",
+      "A friend sending you a photo",
+      "A system update notification from your OS",
+      "A random error message on your device"
+    ],
+    "answer": 0,
+    "explanation": "Phishing attacks often use fake emails pretending to be banks or services to steal your login details."
+  }
+]
