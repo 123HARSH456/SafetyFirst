@@ -3,8 +3,8 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Progress } from "@/components/ui/progress"; 
 import allQuestions from "@/data/questions.json"; 
-
 
 type Question = {
   question: string;
@@ -12,7 +12,6 @@ type Question = {
   answer: number;
   explanation: string;
 };
-
 
 function getRandomQuestions(num: number): Question[] {
   const shuffled = [...allQuestions].sort(() => Math.random() - 0.5);
@@ -27,15 +26,12 @@ export default function QuizPage() {
   const [finished, setFinished] = useState(false);
   const [showExplanation, setShowExplanation] = useState(false);
 
- 
   useEffect(() => {
     setQuestions(getRandomQuestions(10));
   }, []);
 
   const handleAnswer = () => {
-    if (selected === questions[current].answer) {
-      setScore(score + 1);
-    }
+    if (selected === questions[current].answer) setScore(score + 1);
     setShowExplanation(true);
   };
 
@@ -60,6 +56,8 @@ export default function QuizPage() {
 
   if (questions.length === 0) return null;
 
+  const progressValue = ((current + (showExplanation ? 1 : 0)) / questions.length) * 100;
+
   return (
     <div className="flex min-h-screen justify-center items-center">
       <Card className="w-full max-w-xl">
@@ -67,12 +65,13 @@ export default function QuizPage() {
           <CardTitle>Cybersecurity Quiz</CardTitle>
         </CardHeader>
         <CardContent>
+          <Progress value={progressValue} className="mb-4 h-3 rounded-full" />
+
           {!finished ? (
             !showExplanation ? (
               <>
                 <p className="mb-4 font-medium">
-                  Question {current + 1} of {questions.length}:{" "}
-                  {questions[current].question}
+                  Question {current + 1} of {questions.length}: {questions[current].question}
                 </p>
                 <div className="space-y-2">
                   {questions[current].options.map((option, index) => (
@@ -101,29 +100,18 @@ export default function QuizPage() {
               <div className="space-y-4">
                 <p
                   className={`text-lg font-semibold ${
-                    selected === questions[current].answer
-                      ? "text-green-600"
-                      : "text-red-600"
+                    selected === questions[current].answer ? "text-green-600" : "text-red-600"
                   }`}
                 >
-                  {selected === questions[current].answer
-                    ? "✅ Correct!"
-                    : "❌ Incorrect!"}
+                  {selected === questions[current].answer ? "✅ Correct!" : "❌ Incorrect!"}
                 </p>
 
                 <div className="space-y-2">
                   {questions[current].options.map((option, index) => {
-                    let optionClasses =
-                      "w-full p-2 text-left rounded-md border ";
-
-                    if (index === questions[current].answer) {
-                      optionClasses += "bg-green-500 text-white";
-                    } else if (index === selected) {
-                      optionClasses += "bg-red-500 text-white";
-                    } else {
-                      optionClasses += "bg-muted";
-                    }
-
+                    let optionClasses = "w-full p-2 text-left rounded-md border ";
+                    if (index === questions[current].answer) optionClasses += "bg-green-500 text-white";
+                    else if (index === selected) optionClasses += "bg-red-500 text-white";
+                    else optionClasses += "bg-muted";
                     return (
                       <div key={index} className={optionClasses}>
                         {option}
@@ -132,9 +120,7 @@ export default function QuizPage() {
                   })}
                 </div>
 
-                <p className="text-sm text-muted-foreground">
-                  {questions[current].explanation}
-                </p>
+                <p className="text-sm text-muted-foreground">{questions[current].explanation}</p>
                 <Button onClick={handleContinue}>Continue</Button>
               </div>
             )

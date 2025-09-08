@@ -31,5 +31,1182 @@
     ],
     "answer": 0,
     "explanation": "Phishing attacks often use fake emails pretending to be banks or services to steal your login details."
+  },
+  {
+    "question": "Which layer of the OSI model is responsible for reliable data transfer, error detection, and correction?",
+    "options": [
+      "Network Layer",
+      "Transport Layer",
+      "Data Link Layer",
+      "Application Layer"
+    ],
+    "answer": 1,
+    "explanation": "Transport Layer is responsible for reliable data transfer, error detection and correction."
+  },
+  {
+    "question": "In an ARP poisoning attack, what is the main objective of the attacker?",
+    "options": [
+      "Flooding the network with packets",
+      "Redirecting traffic by sending false MAC addresses",
+      "Encrypting files for ransom",
+      "Exploiting a web server vulnerability"
+    ],
+    "answer": 1,
+    "explanation": "An ARP poisoning attack is performed through redirecting traffic by sending false MAC addresses."
+  },
+  {
+    "question": "Which cyber team is primarily responsible for offensive security operations like penetration testing and simulating attacks?",
+    "options": [
+      "Purple Team",
+      "Blue Team",
+      "Green Team",
+      "Red Team"
+    ],
+    "answer": 3,
+    "explanation": "RED Team is responsible for testing offensive security operations."
+  },
+  {
+    "question": "Which file system uses a File Allocation Table and is commonly used in USB drives and older operating systems?",
+    "options": [
+      "NTFS",
+      "HFS+",
+      "FAT",
+      "ext4"
+    ],
+    "answer": 2,
+    "explanation": "FAT uses File Allocation System."
+  },
+  {
+    "question": "Which of the following is India’s primary legislation dealing with cybercrime and electronic commerce?",
+    "options": [
+      "Digital Millennium Copyright Act (DMCA)",
+      "Computer Fraud and Abuse Act (CFAA)",
+      "Information Technology Act, 2000",
+      "Cybersecurity Information Sharing Act (CISA)"
+    ],
+    "answer": 2,
+    "explanation": "IT Act amended 2000 is India's primary act dealing with cybercrime and electronic commerce."
+  },
+  {
+    "question": "Which TCP/IP layer is equivalent to the OSI Transport layer and handles end-to-end communication?",
+    "options": [
+      "Application Layer",
+      "Network Access Layer",
+      "Transport Layer",
+      "Internet Layer"
+    ],
+    "answer": 2,
+    "explanation": "The Transport Layer of the TCP/IP model corresponds to the Transport Layer of the OSI model, handling end-to-end communication and data integrity."
+  },
+  {
+    "question": "What type of malware is designed to spread by infecting other programs, attaching itself to them, and often requires user interaction to activate?",
+    "options": [
+      "Trojan",
+      "Virus",
+      "Worm",
+      "Spyware"
+    ],
+    "answer": 1,
+    "explanation": "A virus is a type of malicious software that attaches itself to other files or programs and spreads by infecting them, often needing a user to run the infected file to activate."
+  },
+  {
+    "question": "Which of the following is considered the primary goal of cybersecurity?",
+    "options": [
+      "Providing unlimited access to all users.",
+      "Ensuring the confidentiality, integrity, and availability of data.",
+      "Creating complex user interfaces for security systems.",
+      "Minimizing the use of any form of digital technology."
+    ],
+    "answer": 1,
+    "explanation": "Confidentiality, Integrity, and Availability (CIA) form the core pillars of a robust cybersecurity framework."
+  },
+  {
+    "question": "The OSI model is a conceptual framework that standardizes the functions of a telecommunication or computing system. How many layers does it have?",
+    "options": [
+      "5 layers",
+      "6 layers",
+      "7 layers",
+      "8 layers"
+    ],
+    "answer": 2,
+    "explanation": "The OSI model consists of seven distinct layers, each with a specific function in network communication."
+  },
+  {
+    "question": "Which type of cyber attack involves an attacker placing themselves between a user and a server to intercept or alter communication?",
+    "options": [
+      "DDoS attack",
+      "SQL injection",
+      "Man-in-the-Middle (MITM) attack",
+      "Phishing"
+    ],
+    "answer": 2,
+    "explanation": "A Man-in-the-Middle (MITM) attack allows the attacker to secretly relay and potentially alter the communication between two parties."
+  },
+  {
+    "question": "A cyber team that focuses on testing an organization's security defenses by simulating real-world attacks is known as a:",
+    "options": [
+      "Blue Team",
+      "Green Team",
+      "Purple Team",
+      "Red Team"
+    ],
+    "answer": 3,
+    "explanation": "The Red Team is the offensive team that simulates attacks to test the effectiveness of the Blue Team's defenses."
+  },
+  {
+    "question": "Which file system uses a File Allocation Table and is commonly used in USB drives and older operating systems?",
+    "options": [
+      "NTFS",
+      "HFS+",
+      "FAT",
+      "ext4"
+    ],
+    "answer": 2,
+    "explanation": "FAT (File Allocation Table) is a legacy file system known for its simplicity and widespread compatibility, especially with flash drives."
+  },
+  {
+    "question": "Which law sets standards for the protection of sensitive patient health information in the United States?",
+    "options": [
+      "IT Act (India)",
+      "GDPR (General Data Protection Regulation)",
+      "HIPAA (Health Insurance Portability and Accountability Act)",
+      "CCPA (California Consumer Privacy Act)"
+    ],
+    "answer": 2,
+    "explanation": "HIPAA establishes regulations for the security and privacy of protected health information (PHI) in the U.S."
+  },
+  {
+    "question": "Which of the following is a best practice for creating a strong password?",
+    "options": [
+      "Using a simple word or phrase that is easy to remember.",
+      "Using the same password for all online accounts.",
+      "Incorporating a mix of uppercase letters, lowercase letters, numbers, and symbols.",
+      "Writing the password down and keeping it near the computer."
+    ],
+    "answer": 2,
+    "explanation": "Combining different character types increases the password's complexity and resistance to brute-force attacks."
+  },
+  {
+    "question": "The TCP/IP model is a suite of communication protocols used to interconnect network devices on the internet. How many layers does it have?",
+    "options": [
+      "3 layers",
+      "4 layers",
+      "5 layers",
+      "7 layers"
+    ],
+    "answer": 1,
+    "explanation": "The TCP/IP model is a four-layer framework: Network Access, Internet, Transport, and Application."
+  },
+  {
+    "question": "An attacker sends a flood of fake ARP (Address Resolution Protocol) messages to link their MAC address with the IP address of another host, redirecting traffic. This is an example of:",
+    "options": [
+      "DDoS attack",
+      "Phishing",
+      "ARP poisoning",
+      "Cross-Site Scripting (XSS)"
+    ],
+    "answer": 2,
+    "explanation": "ARP poisoning, or ARP spoofing, is an attack that manipulates the ARP table to intercept or modify network traffic."
+  },
+  {
+    "question": "Which cyber team is responsible for managing and improving the continuous integration/continuous delivery (CI/CD) pipeline with a focus on integrating security practices?",
+    "options": [
+      "Red Team",
+      "Blue Team",
+      "Green Team",
+      "Purple Team"
+    ],
+    "answer": 2,
+    "explanation": "The Green Team, or Development and Operations team, focuses on integrating security practices into the software development life cycle."
+  },
+  {
+    "question": "Which file system, primarily used in Linux, supports a journaling feature that helps to prevent file system corruption?",
+    "options": [
+      "FAT32",
+      "NTFS",
+      "ext4",
+      "HFS+"
+    ],
+    "answer": 2,
+    "explanation": "Ext4 is the most popular journaling file system for Linux, providing better performance and reliability."
+  },
+  {
+    "question": "The GDPR (General Data Protection Regulation) protects the personal data and privacy of all citizens of:",
+    "options": [
+      "The United States",
+      "The European Union",
+      "China",
+      "India"
+    ],
+    "answer": 1,
+    "explanation": "The GDPR is a regulation in EU law on data protection and privacy for all individuals within the European Union."
+  },
+  {
+    "question": "Which of the following best describes the purpose of a firewall?",
+    "options": [
+      "To hide a user's IP address from websites.",
+      "To encrypt data traveling over the internet.",
+      "To filter network traffic and block unauthorized access to a network.",
+      "To scan a computer for viruses and malware."
+    ],
+    "answer": 2,
+    "explanation": "A firewall acts as a barrier, controlling incoming and outgoing network traffic based on a set of security rules."
+  },
+  {
+    "question": "In the OSI model, which layer is responsible for translating, encrypting, and compressing data?",
+    "options": [
+      "Application Layer (Layer 7)",
+      "Presentation Layer (Layer 6)",
+      "Session Layer (Layer 5)",
+      "Transport Layer (Layer 4)"
+    ],
+    "answer": 1,
+    "explanation": "The Presentation Layer handles data formatting, compression, and encryption to ensure that data is in a usable format for the Application Layer."
+  },
+  {
+    "question": "A type of attack where a hacker inserts a malicious code into a website's input fields to extract information from the database is called:",
+    "options": [
+      "Phishing",
+      "DDoS",
+      "SQL injection",
+      "Man-in-the-Middle"
+    ],
+    "answer": 2,
+    "explanation": "SQL injection is a code injection technique used to attack data-driven applications by inserting SQL statements into input fields."
+  },
+  {
+    "question": "Which cyber team is focused on both offensive and defensive tactics to find weaknesses and improve security?",
+    "options": [
+      "Red Team",
+      "Blue Team",
+      "Purple Team",
+      "Green Team"
+    ],
+    "answer": 2,
+    "explanation": "The Purple Team acts as a facilitator between the Red and Blue teams, combining offensive and defensive strategies for continuous improvement."
+  },
+  {
+    "question": "The NTFS file system, commonly used in Windows, is an acronym for:",
+    "options": [
+      "New Technology File System",
+      "Networked Transfer File System",
+      "Non-Volatile Transfer System",
+      "Native Transactional File System"
+    ],
+    "answer": 0,
+    "explanation": "NTFS stands for New Technology File System and was introduced with the Windows NT operating system."
+  },
+  {
+    "question": "The IT Act of 2000, which deals with cybercrime and electronic commerce, is a law from which country?",
+    "options": [
+      "United Kingdom",
+      "India",
+      "United States",
+      "Australia"
+    ],
+    "answer": 1,
+    "explanation": "The Information Technology Act, 2000 is the primary law in India dealing with cybercrime and electronic commerce."
+  },
+  {
+    "question": "Which general best practice helps to verify a user's identity by requiring a second factor in addition to a password?",
+    "options": [
+      "Using a strong password",
+      "Using a VPN",
+      "Implementing Two-Factor Authentication (2FA)",
+      "Using a firewall"
+    ],
+    "answer": 2,
+    "explanation": "2FA requires a user to provide two different factors to verify their identity, such as a password and a code from a phone."
+  },
+  {
+    "question": "In the TCP/IP model, which layer is responsible for host-to-host communication and provides services like TCP and UDP?",
+    "options": [
+      "Application Layer",
+      "Internet Layer",
+      "Transport Layer",
+      "Network Access Layer"
+    ],
+    "answer": 2,
+    "explanation": "The Transport Layer is responsible for end-to-end communication, managing data flow and providing services like connection-oriented (TCP) or connectionless (UDP) communication."
+  },
+  {
+    "question": "A type of cyber attack that aims to make a service or network resource unavailable by overwhelming it with a flood of traffic from multiple sources is a:",
+    "options": [
+      "Phishing attack",
+      "Man-in-the-Middle attack",
+      "SQL injection",
+      "Distributed Denial of Service (DDoS) attack"
+    ],
+    "answer": 3,
+    "explanation": "A DDoS attack uses a network of compromised computer systems to flood a target with traffic, making it unavailable to legitimate users."
+  },
+  {
+    "question": "Which cyber team is responsible for managing and protecting an organization's network by analyzing threats and responding to security incidents?",
+    "options": [
+      "Red Team",
+      "Blue Team",
+      "Purple Team",
+      "Green Team"
+    ],
+    "answer": 1,
+    "explanation": "The Blue Team is the defensive team that handles incident response, threat hunting, and security monitoring."
+  },
+  {
+    "question": "Which of the following is a key characteristic of the FAT file system?",
+    "options": [
+      "It supports file journaling for data integrity.",
+      "It is a journaling file system.",
+      "It has limited file and partition size compared to NTFS.",
+      "It has advanced security features like file-level permissions."
+    ],
+    "answer": 2,
+    "explanation": "FAT has limitations on file and partition sizes, such as a 4GB file size limit for FAT32, which are overcome by NTFS."
+  },
+  {
+    "question": "Which of the following describes the IT Act of 2000?",
+    "options": [
+      "A law that regulates the use of social media in India.",
+      "A law that provides a legal framework for electronic governance and e-commerce in India.",
+      "A law that enforces strict censorship of internet content.",
+      "A law that is exclusively for the protection of personal health data."
+    ],
+    "answer": 1,
+    "explanation": "The IT Act aims to provide a legal framework for digital activities and address related security concerns."
+  },
+  {
+    "question": "The primary purpose of a VPN (Virtual Private Network) is to:",
+    "options": [
+      "Block malicious websites and viruses.",
+      "Encrypt internet traffic and hide the user's IP address.",
+      "Manage and store passwords for all online accounts.",
+      "Provide a second layer of authentication for user logins."
+    ],
+    "answer": 1,
+    "explanation": "A VPN creates a secure, encrypted tunnel for data, masking the user's IP address and protecting online privacy."
+  },
+  {
+    "question": "Which of the following is an example of an asset in cybersecurity?",
+    "options": [
+      "A cybercriminal group",
+      "A software vulnerability",
+      "An organization's data",
+      "A firewall"
+    ],
+    "answer": 2,
+    "explanation": "An asset is anything of value to an organization that needs to be protected, and data is one of the most important assets."
+  },
+  {
+    "question": "In the TCP/IP model, which layer maps to the Physical and Data Link layers of the OSI model?",
+    "options": [
+      "Network Access Layer",
+      "Internet Layer",
+      "Transport Layer",
+      "Application Layer"
+    ],
+    "answer": 0,
+    "explanation": "The Network Access layer of the TCP/IP model combines the functions of the OSI model's Physical and Data Link layers."
+  },
+  {
+    "question": "Which of the following is an example of a social engineering attack?",
+    "options": [
+      "DDoS",
+      "SQL injection",
+      "Phishing",
+      "Man-in-the-Middle"
+    ],
+    "answer": 2,
+    "explanation": "Phishing is a type of social engineering attack that tricks users into revealing sensitive information through deceptive communication."
+  },
+  {
+    "question": "What is the primary role of a 'Green Team' in a cybersecurity context?",
+    "options": [
+      "Simulating attacks to test defenses.",
+      "Defending a network from attacks.",
+      "Integrating security practices into the software development life cycle.",
+      "Facilitating collaboration between offensive and defensive teams."
+    ],
+    "answer": 2,
+    "explanation": "The Green Team, often referred to as DevSecOps, focuses on embedding security into the entire development process."
+  },
+  {
+    "question": "Which of the following is a characteristic of the ext4 file system?",
+    "options": [
+      "It lacks support for file journaling.",
+      "It is the default file system for Windows.",
+      "It supports a larger volume size and improved performance compared to its predecessors.",
+      "It has a 4GB file size limitation."
+    ],
+    "answer": 2,
+    "explanation": "Ext4 has a theoretical volume size limit of 1 exabyte and incorporates performance improvements over ext3."
+  },
+  {
+    "question": "The GDPR gives individuals the right to have their personal data erased from an organization's systems, also known as:",
+    "options": [
+      "The right to be forgotten.",
+      "The right to data portability.",
+      "The right to rectification.",
+      "The right to object."
+    ],
+    "answer": 0,
+    "explanation": "The 'right to be forgotten' is a key provision of the GDPR, allowing individuals to request the deletion of their personal data under certain conditions."
+  },
+  {
+    "question": "What is the best practice for managing multiple passwords securely?",
+    "options": [
+      "Using the same password for all accounts.",
+      "Writing passwords down on a sticky note.",
+      "Storing passwords in a password manager.",
+      "Using simple, easy-to-remember passwords."
+    ],
+    "answer": 2,
+    "explanation": "A password manager is a secure tool that stores and manages complex passwords for various accounts, requiring only one master password to access them."
+  },
+  {
+    "question": "The OSI model's Physical Layer (Layer 1) is responsible for:",
+    "options": [
+      "Routing data packets between networks.",
+      "Providing an interface for user applications.",
+      "The physical transmission of raw data bits over a communication medium.",
+      "Managing and terminating sessions between applications."
+    ],
+    "answer": 2,
+    "explanation": "The Physical Layer handles the physical connection, including voltage levels, timing, and the actual transfer of data bits."
+  },
+  {
+    "question": "An attack where an attacker sends a user to a malicious website that appears to be legitimate in order to steal their credentials is a form of:",
+    "options": [
+      "DDoS",
+      "ARP poisoning",
+      "Phishing",
+      "SQL injection"
+    ],
+    "answer": 2,
+    "explanation": "Phishing uses deceptive practices, often including fake websites, to trick users into providing personal information."
+  },
+  {
+    "question": "What is the main objective of a 'Blue Team' in cybersecurity?",
+    "options": [
+      "To exploit vulnerabilities and gain unauthorized access.",
+      "To defend the network and infrastructure from attacks.",
+      "To improve the security of the software development life cycle.",
+      "To perform penetration testing on the network."
+    ],
+    "answer": 1,
+    "explanation": "The Blue Team is the defensive team responsible for security monitoring, incident response, and threat detection."
+  },
+  {
+    "question": "Which of the following is a characteristic of the NTFS file system?",
+    "options": [
+      "It lacks support for file-level permissions.",
+      "It is an open-source file system used by Linux.",
+      "It is a proprietary file system developed by Microsoft.",
+      "It has a 4GB file size limitation."
+    ],
+    "answer": 2,
+    "explanation": "NTFS is the proprietary file system developed by Microsoft for its Windows operating systems."
+  },
+  {
+    "question": "The HIPAA law applies to which of the following entities?",
+    "options": [
+      "All businesses in the United States.",
+      "Only government agencies.",
+      "Organizations that handle protected health information.",
+      "Only citizens of the European Union."
+    ],
+    "answer": 2,
+    "explanation": "HIPAA's privacy rule and security rule apply to covered entities and their business associates who handle protected health information (PHI)."
+  },
+  {
+    "question": "Which of the following is a key reason for using a VPN?",
+    "options": [
+      "To increase internet speed.",
+      "To access geographically restricted content and protect privacy.",
+      "To permanently delete all personal data from a device.",
+      "To act as a physical security barrier for a server room."
+    ],
+    "answer": 1,
+    "explanation": "A VPN allows a user to appear as if they are in another location, providing access to geo-restricted content and also protecting their privacy."
+  },
+  {
+    "question": "In the OSI model, which layer is responsible for logical addressing and routing of data packets?",
+    "options": [
+      "Network Layer (Layer 3)",
+      "Data Link Layer (Layer 2)",
+      "Transport Layer (Layer 4)",
+      "Session Layer (Layer 5)"
+    ],
+    "answer": 0,
+    "explanation": "The Network Layer is responsible for logical addressing (like IP addresses) and routing data packets from source to destination across different networks."
+  },
+  {
+    "question": "An attack where an attacker exploits a vulnerability in a web application to execute malicious code on a victim's web browser is known as:",
+    "options": [
+      "SQL injection",
+      "Cross-Site Scripting (XSS)",
+      "DDoS",
+      "Man-in-the-Middle"
+    ],
+    "answer": 1,
+    "explanation": "Cross-Site Scripting (XSS) is a type of injection attack that injects malicious code into a web page viewed by other users."
+  },
+  {
+    "question": "In a cybersecurity context, what is a threat?",
+    "options": [
+      "A security control, such as a firewall.",
+      "A valuable asset, such as data.",
+      "A vulnerability in a system.",
+      "A potential danger that may exploit a vulnerability."
+    ],
+    "answer": 3,
+    "explanation": "A threat is a potential for harm, such as a malicious actor, a natural disaster, or a technical failure."
+  },
+  {
+    "question": "Which of the following is a characteristic of the OSI model but not the TCP/IP model?",
+    "options": [
+      "It is a conceptual framework for networking.",
+      "It has separate layers for Presentation and Session.",
+      "It is a protocol suite used in the real world.",
+      "It uses the Internet Protocol (IP)."
+    ],
+    "answer": 1,
+    "explanation": "The OSI model has a Presentation layer and a Session layer, which are combined into the Application layer in the TCP/IP model."
+  },
+  {
+    "question": "Which type of cyber attack involves a user being tricked into performing an action on a legitimate website without their knowledge?",
+    "options": [
+      "Phishing",
+      "SQL injection",
+      "Cross-Site Request Forgery (CSRF)",
+      "Man-in-the-Middle"
+    ],
+    "answer": 2,
+    "explanation": "CSRF, or 'sea-surf', is an attack that tricks a web browser into executing an unwanted action on a trusted site where the user is authenticated."
+  },
+  {
+    "question": "Which cyber team's main responsibility is to identify and fix security vulnerabilities before they can be exploited?",
+    "options": [
+      "Red Team",
+      "Blue Team",
+      "White Team",
+      "Green Team"
+    ],
+    "answer": 3,
+    "explanation": "The Green Team, or DevSecOps, integrates security into the development process to prevent vulnerabilities from being introduced in the first place."
+  },
+  {
+    "question": "The primary purpose of a firewall is to protect a computer or network from:",
+    "options": [
+      "Unauthorized internet access.",
+      "Hardware failure.",
+      "Natural disasters.",
+      "Physical theft."
+    ],
+    "answer": 0,
+    "explanation": "A firewall's primary purpose is to control network traffic, blocking unauthorized access from the internet to a private network."
+  },
+  {
+    "question": "What is the key difference between the OSI model and the TCP/IP model?",
+    "options": [
+      "The TCP/IP model is a theoretical model, while the OSI model is a practical one.",
+      "The OSI model has a different number of layers and a different layer grouping.",
+      "The OSI model is used only for wired networks, while TCP/IP is for wireless.",
+      "The TCP/IP model only works with a single network, while the OSI model works with multiple networks."
+    ],
+    "answer": 1,
+    "explanation": "The OSI model has seven layers, while the TCP/IP model has four (or five), and their layers are grouped differently."
+  },
+  {
+    "question": "Which of the following is a key characteristic of the FAT file system?",
+    "options": [
+      "It is highly efficient for large files.",
+      "It provides strong data encryption.",
+      "It is compatible with a wide range of operating systems.",
+      "It has built-in support for disk compression."
+    ],
+    "answer": 2,
+    "explanation": "FAT is a legacy file system with broad compatibility, making it suitable for devices that need to be accessed by various operating systems, such as USB drives."
+  },
+  {
+    "question": "The primary purpose of HIPAA is to:",
+    "options": [
+      "Regulate data privacy for all citizens of the United States.",
+      "Protect the privacy and security of protected health information (PHI).",
+      "Provide a legal framework for electronic commerce.",
+      "Set standards for global data protection."
+    ],
+    "answer": 1,
+    "explanation": "HIPAA's main goal is to protect sensitive patient health information from unauthorized disclosure or access."
+  },
+  {
+    "question": "Which of the following is a key component of a strong password policy?",
+    "options": [
+      "Using a single, easy-to-remember password for all accounts.",
+      "Regularly changing passwords and using a mix of characters.",
+      "Sharing passwords with trusted colleagues.",
+      "Using personal information, such as a birthday or pet's name, as a password."
+    ],
+    "answer": 1,
+    "explanation": "A strong password policy encourages regular password changes and the use of a combination of uppercase, lowercase, numbers, and symbols."
+  },
+  {
+    "question": "In the TCP/IP model, which layer is responsible for translating domain names into IP addresses and providing application-specific services?",
+    "options": [
+      "Application Layer",
+      "Transport Layer",
+      "Internet Layer",
+      "Network Access Layer"
+    ],
+    "answer": 0,
+    "explanation": "The Application Layer provides services like DNS (Domain Name System), which translates domain names, and other application-specific services."
+  },
+  {
+    "question": "Which type of cyber attack involves an attacker sending an overwhelming number of requests to a server from a single source?",
+    "options": [
+      "DDoS",
+      "DoS (Denial of Service) attack",
+      "Phishing",
+      "Man-in-the-Middle"
+    ],
+    "answer": 1,
+    "explanation": "A DoS attack is a single-source attack that aims to make a service unavailable by overwhelming it with traffic."
+  },
+  {
+    "question": "Which of the following best describes the function of a 'Purple Team'?",
+    "options": [
+      "To simulate attacks on a network.",
+      "To defend a network from attacks.",
+      "To bridge the gap between offensive and defensive teams to improve security posture.",
+      "To ensure security is integrated into the software development process."
+    ],
+    "answer": 2,
+    "explanation": "The Purple Team facilitates communication and collaboration between the Red and Blue teams to test and improve an organization's security posture."
+  },
+  {
+    "question": "Which of the following is a key characteristic of the NTFS file system?",
+    "options": [
+      "It supports a large number of file attributes and permissions.",
+      "It is not a journaling file system.",
+      "It has a 4GB file size limit.",
+      "It is primarily used in USB drives and legacy systems."
+    ],
+    "answer": 0,
+    "explanation": "NTFS is known for its advanced features, including support for a wide range of file attributes and robust file-level permissions."
+  },
+  {
+    "question": "The GDPR gives individuals the right to have their personal data erased from an organization's systems, also known as:",
+    "options": [
+      "The right to be forgotten.",
+      "The right to data portability.",
+      "The right to rectification.",
+      "The right to object."
+    ],
+    "answer": 0,
+    "explanation": "The 'right to be forgotten' is a key provision of the GDPR, allowing individuals to request the deletion of their personal data under certain conditions."
+  },
+  {
+    "question": "Which of the following is a best practice for a company's password policy?",
+    "options": [
+      "Allowing the use of common words as passwords.",
+      "Enforcing regular password changes and complexity requirements.",
+      "Encouraging employees to write down their passwords for easy access.",
+      "Using a single, static password for all company systems."
+    ],
+    "answer": 1,
+    "explanation": "Regularly changing passwords and enforcing complexity requirements (e.g., length, character types) are crucial for maintaining security."
+  },
+  {
+    "question": "In the OSI model, which layer is responsible for ensuring reliable, end-to-end communication between two hosts?",
+    "options": [
+      "Network Layer (Layer 3)",
+      "Data Link Layer (Layer 2)",
+      "Transport Layer (Layer 4)",
+      "Session Layer (Layer 5)"
+    ],
+    "answer": 2,
+    "explanation": "The Transport Layer is responsible for reliable data transfer and flow control, using protocols like TCP and UDP."
+  },
+  {
+    "question": "An attack that involves a user being tricked into thinking they are interacting with a legitimate website or service is a form of:",
+    "options": [
+      "Phishing",
+      "DDoS",
+      "SQL injection",
+      "Man-in-the-Middle"
+    ],
+    "answer": 0,
+    "explanation": "Phishing is a social engineering attack that uses deceptive communication, often mimicking legitimate sources, to trick users into revealing sensitive information."
+  },
+  {
+    "question": "What is the primary objective of a 'Red Team' in cybersecurity?",
+    "options": [
+      "To defend a network from attacks.",
+      "To simulate attacks on an organization's security defenses.",
+      "To integrate security into the software development life cycle.",
+      "To facilitate communication between offensive and defensive teams."
+    ],
+    "answer": 1,
+    "explanation": "The Red Team is the offensive team that simulates attacks to test the effectiveness of the Blue Team's defenses."
+  },
+  {
+    "question": "Which of the following file systems is best suited for cross-platform compatibility, especially with USB drives?",
+    "options": [
+      "NTFS",
+      "ext4",
+      "HFS+",
+      "FAT32"
+    ],
+    "answer": 3,
+    "explanation": "FAT32 is a legacy file system with wide compatibility across Windows, macOS, and Linux, making it ideal for portable storage devices."
+  },
+  {
+    "question": "The IT Act of 2000 in India provides a legal framework for:",
+    "options": [
+      "Regulating the telecommunications industry.",
+      "Protecting personal health data.",
+      "Electronic governance, digital signatures, and cybercrime.",
+      "Creating new internet protocols."
+    ],
+    "answer": 2,
+    "explanation": "The IT Act provides a legal framework for electronic governance, recognizes digital signatures, and addresses cybercrime."
+  },
+  {
+    "question": "Which of the following is a best practice for securing a Wi-Fi network?",
+    "options": [
+      "Using the default password for the router.",
+      "Hiding the network name (SSID).",
+      "Using a strong encryption protocol like WPA3.",
+      "Disabling the use of a password altogether."
+    ],
+    "answer": 2,
+    "explanation": "Using a strong encryption protocol like WPA3 (Wi-Fi Protected Access 3) encrypts data traffic and protects the network from unauthorized access."
+  },
+  {
+    "question": "In the OSI model, which layer is responsible for managing and terminating connections between two applications?",
+    "options": [
+      "Transport Layer (Layer 4)",
+      "Session Layer (Layer 5)",
+      "Presentation Layer (Layer 6)",
+      "Application Layer (Layer 7)"
+    ],
+    "answer": 1,
+    "explanation": "The Session Layer establishes, manages, and terminates the connections (sessions) between applications."
+  },
+  {
+    "question": "An attack where a malicious code is injected into a web application to manipulate the database is an example of:",
+    "options": [
+      "SQL injection",
+      "Cross-Site Scripting (XSS)",
+      "DDoS",
+      "Phishing"
+    ],
+    "answer": 0,
+    "explanation": "SQL injection is a code injection technique used to attack data-driven applications by inserting malicious SQL statements into input fields."
+  },
+  {
+    "question": "Which of the following is a key characteristic of the Blue Team?",
+    "options": [
+      "It performs offensive attacks on a network.",
+      "It focuses on defensive security and incident response.",
+      "It integrates security into the development life cycle.",
+      "It facilitates collaboration between the Red and Blue teams."
+    ],
+    "answer": 1,
+    "explanation": "The Blue Team is the defensive team responsible for protecting a network from attacks and responding to security incidents."
+  },
+  {
+    "question": "Which of the following is a characteristic of the NTFS file system?",
+    "options": [
+      "It is an open-source file system for Linux.",
+      "It supports encryption and file-level permissions.",
+      "It has limited file and partition sizes.",
+      "It is primarily used in USB drives and older systems."
+    ],
+    "answer": 1,
+    "explanation": "NTFS has built-in features for file-level encryption (EFS) and robust access control lists for permissions."
+  },
+  {
+    "question": "The IT Act of 2000 in India provides legal recognition to:",
+    "options": [
+      "Handwritten signatures.",
+      "Verbal agreements.",
+      "Digital signatures.",
+      "Cryptocurrency transactions."
+    ],
+    "answer": 2,
+    "explanation": "The IT Act gives legal recognition to electronic records and digital signatures, facilitating e-commerce and e-governance."
+  },
+  {
+    "question": "Which of the following is a key reason for using a firewall?",
+    "options": [
+      "To increase internet speed.",
+      "To prevent physical theft of a computer.",
+      "To filter and control incoming and outgoing network traffic.",
+      "To encrypt all data on a hard drive."
+    ],
+    "answer": 2,
+    "explanation": "A firewall's primary function is to act as a barrier, filtering network traffic based on a set of rules to protect a network from unauthorized access."
+  },
+  {
+    "question": "In the OSI model, which layer is responsible for framing data and providing physical addressing (MAC addresses)?",
+    "options": [
+      "Physical Layer (Layer 1)",
+      "Data Link Layer (Layer 2)",
+      "Network Layer (Layer 3)",
+      "Transport Layer (Layer 4)"
+    ],
+    "answer": 1,
+    "explanation": "The Data Link Layer is responsible for node-to-node data transfer, framing, and physical addressing (MAC addresses)."
+  },
+  {
+    "question": "A type of attack where a hacker modifies the DNS cache on a system to redirect traffic to a malicious server is called:",
+    "options": [
+      "Phishing",
+      "DNS spoofing (or DNS cache poisoning)",
+      "Man-in-the-Middle",
+      "DDoS"
+    ],
+    "answer": 1,
+    "explanation": "DNS spoofing involves corrupting the DNS cache to redirect a user to a fraudulent website."
+  },
+  {
+    "question": "Which cyber team is responsible for assessing and improving an organization's overall security posture by combining offensive and defensive strategies?",
+    "options": [
+      "Red Team",
+      "Blue Team",
+      "Purple Team",
+      "Green Team"
+    ],
+    "answer": 2,
+    "explanation": "The Purple Team facilitates the collaboration between the Red and Blue teams to ensure that the security measures are effective and continuously improving."
+  },
+  {
+    "question": "Which of the following is a characteristic of the ext4 file system?",
+    "options": [
+      "It is a proprietary file system developed by Microsoft.",
+      "It supports file-level permissions and journaling.",
+      "It has a 4GB file size limit.",
+      "It is not compatible with Linux operating systems."
+    ],
+    "answer": 1,
+    "explanation": "Ext4 is a journaling file system that supports file-level permissions, which are important for security and data integrity in Linux."
+  },
+  {
+    "question": "The primary purpose of the GDPR is to:",
+    "options": [
+      "Regulate how organizations in the United States handle personal data.",
+      "Give citizens of the European Union more control over their personal data.",
+      "Provide a legal framework for digital signatures in India.",
+      "Enforce strict censorship on the internet."
+    ],
+    "answer": 1,
+    "explanation": "The GDPR gives EU citizens more control over their data and provides a legal framework for data protection."
+  },
+  {
+    "question": "Which of the following is an example of a security best practice?",
+    "options": [
+      "Using the same password for all online accounts.",
+      "Using antivirus software to protect against malware.",
+      "Disabling the use of a firewall.",
+      "Downloading software from unverified sources."
+    ],
+    "answer": 1,
+    "explanation": "Antivirus software is a key security measure that helps to detect, prevent, and remove malicious software from a computer."
+  },
+  {
+    "question": "In the TCP/IP model, which layer is responsible for logical addressing and routing of data packets?",
+    "options": [
+      "Application Layer",
+      "Transport Layer",
+      "Internet Layer",
+      "Network Access Layer"
+    ],
+    "answer": 2,
+    "explanation": "The Internet Layer, which includes the IP protocol, is responsible for logical addressing and routing data across networks."
+  },
+  {
+    "question": "An attacker uses a network of compromised computers (a botnet) to launch a coordinated attack on a target server. This is an example of a:",
+    "options": [
+      "Denial of Service (DoS) attack",
+      "Distributed Denial of Service (DDoS) attack",
+      "Phishing attack",
+      "Man-in-the-Middle attack"
+    ],
+    "answer": 1,
+    "explanation": "A DDoS attack uses multiple compromised systems (a botnet) to launch a coordinated attack on a target server."
+  },
+  {
+    "question": "Which of the following is a key characteristic of a Red Team?",
+    "options": [
+      "They perform security monitoring and incident response.",
+      "They work to fix vulnerabilities and improve security defenses.",
+      "They act as ethical hackers to simulate attacks and test security.",
+      "They are responsible for network administration."
+    ],
+    "answer": 2,
+    "explanation": "The Red Team's primary role is to simulate real-world attacks to identify weaknesses in an organization's security posture."
+  },
+  {
+    "question": "Which of the following is a key characteristic of the FAT file system?",
+    "options": [
+      "It is a journaling file system.",
+      "It has no support for long file names.",
+      "It has a 4GB file size limitation in its most common version (FAT32).",
+      "It is the default file system for modern Windows operating systems."
+    ],
+    "answer": 2,
+    "explanation": "FAT32, the most common version of FAT, has a maximum file size of 4GB."
+  },
+  {
+    "question": "What is the primary objective of HIPAA?",
+    "options": [
+      "To regulate electronic commerce in the United States.",
+      "To protect personal financial data.",
+      "To protect the confidentiality and security of protected health information (PHI).",
+      "To provide a legal framework for digital signatures in India."
+    ],
+    "answer": 2,
+    "explanation": "HIPAA's main goal is to protect sensitive patient health information from unauthorized disclosure or access."
+  },
+  {
+    "question": "Which of the following is a key component of a strong password policy?",
+    "options": [
+      "Using a password that is a personal detail, such as a birthday or pet's name.",
+      "Using a long password with a combination of uppercase letters, lowercase letters, numbers, and symbols.",
+      "Using a single, static password for all accounts.",
+      "Writing a password down on a sticky note and keeping it on a desk."
+    ],
+    "answer": 1,
+    "explanation": "A long, complex password with a mix of character types is difficult to guess and resistant to brute-force attacks."
+  },
+  {
+    "question": "In the TCP/IP model, which layer combines the Session, Presentation, and Application layers of the OSI model?",
+    "options": [
+      "Transport Layer",
+      "Internet Layer",
+      "Network Access Layer",
+      "Application Layer"
+    ],
+    "answer": 3,
+    "explanation": "The Application Layer of the TCP/IP model combines the functions of the OSI model's Session, Presentation, and Application layers."
+  },
+  {
+    "question": "An attack that involves an attacker secretly relaying and altering communication between two parties is a:",
+    "options": [
+      "SQL injection",
+      "DDoS",
+      "Phishing",
+      "Man-in-the-Middle (MITM) attack"
+    ],
+    "answer": 3,
+    "explanation": "A Man-in-the-Middle (MITM) attack allows the attacker to intercept and control communication between two parties."
+  },
+  {
+    "question": "Which of the following is a key characteristic of a Blue Team?",
+    "options": [
+      "They simulate attacks and perform penetration testing.",
+      "They are responsible for designing and implementing security controls.",
+      "They are responsible for developing software.",
+      "They facilitate collaboration between offensive and defensive teams."
+    ],
+    "answer": 1,
+    "explanation": "The Blue Team is responsible for defensive security, including designing and implementing security controls to protect the network."
+  },
+  {
+    "question": "Which of the following is a key characteristic of the NTFS file system?",
+    "options": [
+      "It lacks support for disk quotas.",
+      "It supports a wide range of file and partition sizes.",
+      "It is primarily used in USB drives and legacy systems.",
+      "It is an open-source file system."
+    ],
+    "answer": 1,
+    "explanation": "NTFS is designed to handle very large files and partitions, which is a major advantage over older file systems."
+  },
+  {
+    "question": "What is the primary purpose of the IT Act of 2000 in India?",
+    "options": [
+      "To regulate the telecommunications industry.",
+      "To provide a legal framework for electronic commerce and cybercrime.",
+      "To enforce strict censorship of internet content.",
+      "To protect personal financial data."
+    ],
+    "answer": 1,
+    "explanation": "The IT Act aims to provide a legal framework for digital activities and address related security concerns."
+  },
+  {
+    "question": "Which of the following is a key component of a strong security policy?",
+    "options": [
+      "Using a single, easy-to-remember password for all systems.",
+      "Using antivirus software and keeping it updated.",
+      "Allowing the use of personal information as a password.",
+      "Disabling the use of a firewall."
+    ],
+    "answer": 1,
+    "explanation": "Using updated antivirus software is a key security measure that helps to protect against malware and other threats."
+  },
+  {
+    "question": "In the OSI model, which layer is responsible for translating data from the application layer into a format that can be understood by all other layers?",
+    "options": [
+      "Application Layer (Layer 7)",
+      "Presentation Layer (Layer 6)",
+      "Session Layer (Layer 5)",
+      "Transport Layer (Layer 4)"
+    ],
+    "answer": 1,
+    "explanation": "The Presentation Layer handles data formatting, compression, and encryption to ensure that data is in a usable format for the Application Layer."
+  },
+  {
+    "question": "An attack that involves an attacker gaining unauthorized access to a computer system or network is a form of:",
+    "options": [
+      "Phishing",
+      "DDoS",
+      "Hacking",
+      "SQL injection"
+    ],
+    "answer": 2,
+    "explanation": "Hacking is the act of gaining unauthorized access to a computer system or network."
+  },
+  {
+    "question": "Which cyber team is responsible for performing security audits and vulnerability assessments to identify weaknesses?",
+    "options": [
+      "Red Team",
+      "Blue Team",
+      "White Team",
+      "Purple Team"
+    ],
+    "answer": 3,
+    "explanation": "The Purple Team often performs security audits and vulnerability assessments to improve the security posture of an organization by combining offensive and defensive strategies."
+  },
+  {
+    "question": "Which of the following is a key characteristic of the ext4 file system?",
+    "options": [
+      "It is a journaling file system.",
+      "It has a 4GB file size limit.",
+      "It is not compatible with Linux operating systems.",
+      "It is a proprietary file system developed by Apple."
+    ],
+    "answer": 0,
+    "explanation": "Ext4 is a journaling file system, which means it keeps a record of changes to the file system, helping to prevent data corruption."
+  },
+  {
+    "question": "What is the primary purpose of the GDPR?",
+    "options": [
+      "To regulate electronic commerce in the United States.",
+      "To give citizens of the European Union more control over their personal data.",
+      "To provide a legal framework for digital signatures in India.",
+      "To protect personal financial data."
+    ],
+    "answer": 1,
+    "explanation": "The GDPR gives EU citizens more control over their data and provides a legal framework for data protection."
+  },
+  {
+    "question": "Which of the following is an example of a security best practice?",
+    "options": [
+      "Using a password that is a personal detail, such as a birthday or pet's name.",
+      "Using a long, complex password with a combination of uppercase letters, lowercase letters, numbers, and symbols.",
+      "Using a single, static password for all accounts.",
+      "Writing a password down on a sticky note and keeping it on a desk."
+    ],
+    "answer": 1,
+    "explanation": "A long, complex password with a mix of character types is difficult to guess and resistant to brute-force attacks."
+  },
+  {
+    "question": "In the OSI model, which layer is responsible for providing network services to user applications?",
+    "options": [
+      "Application Layer (Layer 7)",
+      "Presentation Layer (Layer 6)",
+      "Session Layer (Layer 5)",
+      "Transport Layer (Layer 4)"
+    ],
+    "answer": 0,
+    "explanation": "The Application Layer is the top layer of the OSI model and is responsible for providing network services to user applications."
+  },
+  {
+    "question": "An attack where a hacker tricks a user into thinking they are interacting with a legitimate website or service is a form of:",
+    "options": [
+      "Phishing",
+      "DDoS",
+      "SQL injection",
+      "Man-in-the-Middle"
+    ],
+    "answer": 0,
+    "explanation": "Phishing is a social engineering attack that uses deceptive communication, often mimicking legitimate sources, to trick users into revealing sensitive information."
+  },
+  {
+    "question": "Which cyber team is responsible for performing security audits and vulnerability assessments to identify weaknesses?",
+    "options": [
+      "Red Team",
+      "Blue Team",
+      "White Team",
+      "Purple Team"
+    ],
+    "answer": 3,
+    "explanation": "The Purple Team often performs security audits and vulnerability assessments to improve the security posture of an organization by combining offensive and defensive strategies."
+  },
+  {
+    "question": "Which of the following is a key characteristic of the NTFS file system?",
+    "options": [
+      "It lacks support for disk quotas.",
+      "It supports a wide range of file and partition sizes.",
+      "It is primarily used in USB drives and legacy systems.",
+      "It is an open-source file system."
+    ],
+    "answer": 1,
+    "explanation": "NTFS is designed to handle very large files and partitions, which is a major advantage over older file systems."
+  },
+  {
+    "question": "The primary purpose of the IT Act of 2000 in India is to:",
+    "options": [
+      "To regulate the telecommunications industry.",
+      "To provide a legal framework for electronic commerce and cybercrime.",
+      "To enforce strict censorship of internet content.",
+      "To protect personal financial data."
+    ],
+    "answer": 1,
+    "explanation": "The IT Act aims to provide a legal framework for digital activities and address related security concerns."
+  },
+  {
+    "question": "Which of the following is an example of a security best practice?",
+    "options": [
+      "Using a password that is a personal detail, such as a birthday or pet's name.",
+      "Using a long, complex password with a combination of uppercase letters, lowercase letters, numbers, and symbols.",
+      "Using a single, static password for all accounts.",
+      "Writing a password down on a sticky note and keeping it on a desk."
+    ],
+    "answer": 1,
+    "explanation": "A long, complex password with a mix of character types is difficult to guess and resistant to brute-force attacks."
+  },
+  {
+    "question": "In the OSI model, which layer is responsible for providing network services to user applications?",
+    "options": [
+      "Application Layer (Layer 7)",
+      "Presentation Layer (Layer 6)",
+      "Session Layer (Layer 5)",
+      "Transport Layer (Layer 4)"
+    ],
+    "answer": 0,
+    "explanation": "The Application Layer is the top layer of the OSI model and is responsible for providing network services to user applications."
+  },
+  {
+    "question": "An attack where a hacker tricks a user into thinking they are interacting with a legitimate website or service is a form of:",
+    "options": [
+      "Phishing",
+      "DDoS",
+      "SQL injection",
+      "Man-in-the-Middle"
+    ],
+    "answer": 0,
+    "explanation": "Phishing is a social engineering attack that uses deceptive communication, often mimicking legitimate sources, to trick users into revealing sensitive information."
+  },
+  {
+    "question": "Which cyber team is responsible for performing security audits and vulnerability assessments to identify weaknesses?",
+    "options": [
+      "Red Team",
+      "Blue Team",
+      "White Team",
+      "Purple Team"
+    ],
+    "answer": 3,
+    "explanation": "The Purple Team often performs security audits and vulnerability assessments to improve the security posture of an organization by combining offensive and defensive strategies."
   }
 ]
