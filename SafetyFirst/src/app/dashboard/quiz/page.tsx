@@ -5,19 +5,29 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import allQuestions from "@/data/questions.json"; 
 
-function getRandomQuestions(num: number) {
+
+type Question = {
+  question: string;
+  options: string[];
+  answer: number;
+  explanation: string;
+};
+
+
+function getRandomQuestions(num: number): Question[] {
   const shuffled = [...allQuestions].sort(() => Math.random() - 0.5);
   return shuffled.slice(0, num);
 }
 
 export default function QuizPage() {
-  const [questions, setQuestions] = useState<any[]>([]);
+  const [questions, setQuestions] = useState<Question[]>([]);
   const [current, setCurrent] = useState(0);
   const [selected, setSelected] = useState<number | null>(null);
   const [score, setScore] = useState(0);
   const [finished, setFinished] = useState(false);
   const [showExplanation, setShowExplanation] = useState(false);
 
+ 
   useEffect(() => {
     setQuestions(getRandomQuestions(10));
   }, []);
@@ -65,7 +75,7 @@ export default function QuizPage() {
                   {questions[current].question}
                 </p>
                 <div className="space-y-2">
-                  {questions[current].options.map((option: string, index: number) => (
+                  {questions[current].options.map((option, index) => (
                     <button
                       key={index}
                       onClick={() => setSelected(index)}
@@ -102,7 +112,7 @@ export default function QuizPage() {
                 </p>
 
                 <div className="space-y-2">
-                  {questions[current].options.map((option: string, index: number) => {
+                  {questions[current].options.map((option, index) => {
                     let optionClasses =
                       "w-full p-2 text-left rounded-md border ";
 
