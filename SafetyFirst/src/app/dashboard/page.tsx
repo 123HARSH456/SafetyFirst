@@ -95,7 +95,7 @@ export default function AboutSafetyFirst() {
 
       {/* Call to Action */}
       <div className="text-center space-y-4">
-        <h3 className="text-xl font-semibold">Put SafetyFirst, always.</h3>
+        <h3 className="text-xl font-semibold">Lets Put SafetyFirst, always.</h3>
         <Link href="/dashboard/uses"><Button size="lg" className="rounded-2xl">
           Get Started
         </Button></Link>

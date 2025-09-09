@@ -1,15 +1,19 @@
 "use client"
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-
+import { motion } from "framer-motion"
 export default function Uses() {
   return (
     <div className="max-w-5xl mx-auto px-6 py-12 space-y-12">
       {/* Hero Section */}
       <section className="text-center space-y-4">
-        <h1 className="text-4xl font-bold tracking-tight">
-          How People Use <span className="text-blue-600">SafetyFirst</span>
-        </h1>
+        <motion.h1
+          className="text-4xl font-bold tracking-tight"
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+        >
+          How people use <span className="text-blue-600">SafetyFirst</span>
+        </motion.h1>
         <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
           SafetyFirst fits into everyday browsing, helping students, professionals, and families stay safe online. 
           Here are some common ways our toolkit makes life easier and more secure.
