@@ -5,6 +5,8 @@ import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Progress } from "@/components/ui/progress";
 import { cn } from "@/lib/utils";
+import { motion } from "framer-motion";
+
 const Page = () => {
   const [password, setPassword] = React.useState("");
   const [strength, setStrength] = React.useState({
@@ -24,38 +26,38 @@ const Page = () => {
 
     let strengthLabel = "";
     let strengthColor = "";
-    let progressColorClass = ""
-     switch (score) {
+    let progressColorClass = "";
+    switch (score) {
       case 0:
       case 1:
-        strengthLabel = "Very Weak"
-        strengthColor = "text-red-600"
-        progressColorClass = "bg-red-600"
-        break
+        strengthLabel = "Very Weak";
+        strengthColor = "text-red-600";
+        progressColorClass = "bg-red-600";
+        break;
       case 2:
-        strengthLabel = "Weak"
-        strengthColor = "text-orange-500"
-        progressColorClass = "bg-orange-500"
-        break
+        strengthLabel = "Weak";
+        strengthColor = "text-orange-500";
+        progressColorClass = "bg-orange-500";
+        break;
       case 3:
-        strengthLabel = "Medium"
-        strengthColor = "text-yellow-500"
-        progressColorClass = "bg-yellow-500"
-        break
+        strengthLabel = "Medium";
+        strengthColor = "text-yellow-500";
+        progressColorClass = "bg-yellow-500";
+        break;
       case 4:
-        strengthLabel = "Strong"
-        strengthColor = "text-blue-500"
-        progressColorClass = "bg-blue-500"
-        break
+        strengthLabel = "Strong";
+        strengthColor = "text-blue-500";
+        progressColorClass = "bg-blue-500";
+        break;
       case 5:
-        strengthLabel = "Very Strong"
-        strengthColor = "text-green-600"
-        progressColorClass = "bg-green-600"
-        break
+        strengthLabel = "Very Strong";
+        strengthColor = "text-green-600";
+        progressColorClass = "bg-green-600";
+        break;
       default:
-        strengthLabel = ""
-        strengthColor = "text-muted-foreground"
-        progressColorClass = ""
+        strengthLabel = "";
+        strengthColor = "text-muted-foreground";
+        progressColorClass = "";
     }
 
     if (!pass) {
@@ -69,17 +71,37 @@ const Page = () => {
       label: strengthLabel,
       color: strengthColor,
       progressColor: progressColorClass,
-    })
-  }
+    });
+  };
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const newPassword = event.target.value;
     setPassword(newPassword);
     checkPasswordStrength(newPassword);
-  }
+  };
 
   return (
-    <div className="flex h-full justify-center items-center">
+    <div className="flex flex-col items-center px-6 py-12 space-y-12 min-h-screen">
+      {/* Hero Section */}
+      <section className="text-center space-y-4 max-w-2xl">
+        <motion.h1
+          className="text-4xl md:text-5xl font-bold tracking-tight"
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+        >
+          Password Strength Checker
+        </motion.h1>
+        <motion.p
+          className="text-lg text-muted-foreground"
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.1 }}
+        >
+          Create strong and secure passwords to protect your accounts. Type a password below to see its strength and learn how to improve it
+        </motion.p>
+      </section>
+
+      {/* Password Strength Checker Card */}
       <Card className="w-full max-w-md">
         <CardHeader>
           <CardTitle>Password Strength Checker</CardTitle>
@@ -91,12 +113,12 @@ const Page = () => {
             value={password}
             onChange={handleChange}
           />
-          <Progress value={strength.value}
-            indicatorClassName={strength.progressColor} />
+          <Progress value={strength.value} indicatorClassName={strength.progressColor} />
           <p className={cn("text-sm", strength.color)}>{strength.label}</p>
         </CardContent>
       </Card>
     </div>
   );
 };
+
 export default Page;

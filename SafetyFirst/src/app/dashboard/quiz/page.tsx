@@ -3,8 +3,9 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Progress } from "@/components/ui/progress"; 
-import allQuestions from "@/data/questions.json"; 
+import { Progress } from "@/components/ui/progress";
+import allQuestions from "@/data/questions.json";
+import { motion } from "framer-motion";
 
 type Question = {
   question: string;
@@ -56,14 +57,32 @@ export default function QuizPage() {
 
   if (questions.length === 0) return null;
 
-  const progressValue = ((current + (showExplanation ? 1 : 0)) / questions.length) * 100;
+  const progressValue =
+    ((current + (showExplanation ? 1 : 0)) / questions.length) * 100;
 
   return (
-    <div className="flex min-h-screen justify-center items-center">
+    <div className="flex flex-col min-h-screen items-center justify-start pt-12 pb-6 space-y-8 px-4">
+      <section className="text-center space-y-4 w-full max-w-xl">
+        <motion.h1
+          className="text-4xl font-bold tracking-tight"
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+        >
+          Cybersecurity Awareness Quiz
+        </motion.h1>
+        <motion.p
+          className="text-lg text-muted-foreground"
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.1 }}
+        >
+          Test your knowledge on online safety and cybersecurity best practices.
+          Complete the quiz to see how prepared you are to stay secure on the
+          web.
+        </motion.p>
+      </section>
+
       <Card className="w-full max-w-xl">
-        <CardHeader>
-          <CardTitle>Cybersecurity Quiz</CardTitle>
-        </CardHeader>
         <CardContent>
           <Progress value={progressValue} className="mb-4 h-3 rounded-full" />
 
@@ -71,7 +90,8 @@ export default function QuizPage() {
             !showExplanation ? (
               <>
                 <p className="mb-4 font-medium">
-                  Question {current + 1} of {questions.length}: {questions[current].question}
+                  Question {current + 1} of {questions.length}:{" "}
+                  {questions[current].question}
                 </p>
                 <div className="space-y-2">
                   {questions[current].options.map((option, index) => (
@@ -100,17 +120,24 @@ export default function QuizPage() {
               <div className="space-y-4">
                 <p
                   className={`text-lg font-semibold ${
-                    selected === questions[current].answer ? "text-green-600" : "text-red-600"
+                    selected === questions[current].answer
+                      ? "text-green-600"
+                      : "text-red-600"
                   }`}
                 >
-                  {selected === questions[current].answer ? "✅ Correct!" : "❌ Incorrect!"}
+                  {selected === questions[current].answer
+                    ? "✅ Correct!"
+                    : "❌ Incorrect!"}
                 </p>
 
                 <div className="space-y-2">
                   {questions[current].options.map((option, index) => {
-                    let optionClasses = "w-full p-2 text-left rounded-md border ";
-                    if (index === questions[current].answer) optionClasses += "bg-green-500 text-white";
-                    else if (index === selected) optionClasses += "bg-red-500 text-white";
+                    let optionClasses =
+                      "w-full p-2 text-left rounded-md border ";
+                    if (index === questions[current].answer)
+                      optionClasses += "bg-green-500 text-white";
+                    else if (index === selected)
+                      optionClasses += "bg-red-500 text-white";
                     else optionClasses += "bg-muted";
                     return (
                       <div key={index} className={optionClasses}>
@@ -120,7 +147,9 @@ export default function QuizPage() {
                   })}
                 </div>
 
-                <p className="text-sm text-muted-foreground">{questions[current].explanation}</p>
+                <p className="text-sm text-muted-foreground">
+                  {questions[current].explanation}
+                </p>
                 <Button onClick={handleContinue}>Continue</Button>
               </div>
             )
