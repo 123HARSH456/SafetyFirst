@@ -30,59 +30,40 @@ export default function TempMail() {
   const [selectedMessage, setSelectedMessage] = useState<Message | null>(null);
 
   const generateEmail = async () => {
-    const resp = await fetch("/api/tempmail/create", { method: "POST" });
-    const data = await resp.json();
-    if (resp.ok) {
-      setTempEmail(data.address);
-      setToken(`Bearer ${data.token}`);
-      setInbox([]);
+    try {
+      const resp = await fetch("/api/tempmail/create", { method: "POST" });
+      const data = await resp.json();
+      if (resp.ok) {
+        setTempEmail(data.address);
+        setToken(`Bearer ${data.token}`);
+        setInbox([]);
 
-      //Save in localStorage
-      localStorage.setItem("tempEmail", data.address);
-      localStorage.setItem("tempToken", `Bearer ${data.token}`);
-    }
-  };
-
-  const fetchInbox = async () => {
-    if (!token) return;
-    const resp = await fetch("/api/tempmail/messages", {
-      headers: { Authorization: token },
-    });
-    const data = await resp.json();
-
-    if (resp.ok) {
-      interface ApiMessage {
-        id: string;
-        from?: { address: string };
-        subject?: string;
-        createdAt: string;
+        localStorage.setItem("tempEmail", data.address);
+        localStorage.setItem("tempToken", `Bearer ${data.token}`);
       }
-
-      const msgs = (data["hydra:member"] || []).map((m: ApiMessage) => ({
-        id: m.id,
-        from: m.from?.address || "Unknown",
-        subject: m.subject || "(no subject)",
-        time: new Date(m.createdAt).toLocaleTimeString(),
-      }));
-
-      setInbox(msgs);
+    } catch (err) {
+      console.error(err);
     }
   };
 
   const openMessage = async (id: string) => {
     if (!token) return;
-    const resp = await fetch(`/api/tempmail/message/${id}`, {
-      headers: { Authorization: token },
-    });
-    const data = await resp.json();
-    if (resp.ok) {
-      setSelectedMessage({
-        id: data.id,
-        from: data.from?.address,
-        subject: data.subject,
-        time: new Date(data.createdAt).toLocaleString(),
-        body: data.text || data.intro,
+    try {
+      const resp = await fetch(`/api/tempmail/message/${id}`, {
+        headers: { Authorization: token },
       });
+      const data = await resp.json();
+      if (resp.ok) {
+        setSelectedMessage({
+          id: data.id,
+          from: data.from?.address,
+          subject: data.subject,
+          time: new Date(data.createdAt).toLocaleString(),
+          body: data.text || data.intro,
+        });
+      }
+    } catch (err) {
+      console.error(err);
     }
   };
 
@@ -94,16 +75,7 @@ export default function TempMail() {
     }
   };
 
-  // auto-refresh inbox every 10s
-  useEffect(() => {
-    if (!token) return;
-
-    const interval = setInterval(fetchInbox, 10000);
-    fetchInbox(); // initial fetch
-
-    return () => clearInterval(interval);
-  }, [token, fetchInbox]);
-
+  // Load saved email/token
   useEffect(() => {
     const savedEmail = localStorage.getItem("tempEmail");
     const savedToken = localStorage.getItem("tempToken");
@@ -112,6 +84,35 @@ export default function TempMail() {
       setToken(savedToken);
     }
   }, []);
+
+  // Auto-refresh inbox
+  useEffect(() => {
+    if (!token) return;
+
+    const fetchInbox = async () => {
+      try {
+        const resp = await fetch("/api/tempmail/messages", {
+          headers: { Authorization: token },
+        });
+        const data = await resp.json();
+        if (resp.ok) {
+          const msgs = (data["hydra:member"] || []).map((m: any) => ({
+            id: m.id,
+            from: m.from?.address || "Unknown",
+            subject: m.subject || "(no subject)",
+            time: new Date(m.createdAt).toLocaleTimeString(),
+          }));
+          setInbox(msgs);
+        }
+      } catch (err) {
+        console.error(err);
+      }
+    };
+
+    fetchInbox();
+    const interval = setInterval(fetchInbox, 10000);
+    return () => clearInterval(interval);
+  }, [token]);
 
   return (
     <div className="max-w-4xl mx-auto px-6 py-12 space-y-8 dark text-white min-h-screen">
