@@ -39,8 +39,14 @@ export default function ReportSuspiciousLink() {
     setLoading(true);
 
     try {
-      // Simulate backend call
-      await new Promise((resolve) => setTimeout(resolve, 1000));
+      const resp = await fetch("/api/report", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ url, reason }),
+      });
+
+      if (!resp.ok) throw new Error("Failed to submit");
+
       setUrl("");
       setReason("");
       setSubmitted(true);
@@ -68,7 +74,9 @@ export default function ReportSuspiciousLink() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.1 }}
         >
-          Help keep the web safe! Submit reports for suspicious or unsafe websites so our extension can flag and protect users from potential threats.
+          Help keep the web safe! Submit reports for suspicious or unsafe
+          websites so our extension can flag and protect users from potential
+          threats.
         </motion.p>
       </section>
 
@@ -98,7 +106,8 @@ export default function ReportSuspiciousLink() {
           {/* Inline feedback */}
           {submitted && (
             <p className="text-green-600 font-medium">
-              ✅ Your report has been submitted. Thank you for helping keep the web safe!
+              ✅ Your report has been submitted. Thank you for helping keep the
+              web safe!
             </p>
           )}
           {error && <p className="text-red-600 font-medium">⚠️ {error}</p>}
