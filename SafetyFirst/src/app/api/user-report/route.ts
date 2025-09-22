@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server"
 
 // In a real app, replace this with a DB connection (MongoDB, PostgreSQL, etc.)
-let reports: {
+const reports: {
   url: string
   reason: string
   createdAt: string

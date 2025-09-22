@@ -51,12 +51,20 @@ export default function TempMail() {
     const data = await resp.json();
 
     if (resp.ok) {
-      const msgs = (data["hydra:member"] || []).map((m: any) => ({
+      interface ApiMessage {
+        id: string;
+        from?: { address: string };
+        subject?: string;
+        createdAt: string;
+      }
+
+      const msgs = (data["hydra:member"] || []).map((m: ApiMessage) => ({
         id: m.id,
         from: m.from?.address || "Unknown",
         subject: m.subject || "(no subject)",
         time: new Date(m.createdAt).toLocaleTimeString(),
       }));
+
       setInbox(msgs);
     }
   };
@@ -88,12 +96,13 @@ export default function TempMail() {
 
   // auto-refresh inbox every 10s
   useEffect(() => {
-    if (token) {
-      fetchInbox();
-      const interval = setInterval(fetchInbox, 10000);
-      return () => clearInterval(interval);
-    }
-  }, [token]);
+    if (!token) return;
+
+    const interval = setInterval(fetchInbox, 10000);
+    fetchInbox(); // initial fetch
+
+    return () => clearInterval(interval);
+  }, [token, fetchInbox]);
 
   useEffect(() => {
     const savedEmail = localStorage.getItem("tempEmail");
