@@ -1,26 +1,26 @@
 import { NextRequest, NextResponse } from "next/server";
 
-// Helper function to introduce a delay
+
 const delay = (ms: number) => new Promise(res => setTimeout(res, ms));
 
 const fetchHeaders = {
     'Accept': 'application/json',
     'Content-Type': 'application/json',
-    // Add a User-Agent header to mimic a real browser request
+    
     'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'
 };
 
 
 export async function POST(req: NextRequest) {
   try {
-    // 1. Fetch available domains from the mail.tm service
+    
     console.log("Fetching domains from mail.tm...");
     const domainResponse = await fetch("https://api.mail.tm/domains", {
         headers: {
             'Accept': fetchHeaders.Accept,
             'User-Agent': fetchHeaders['User-Agent']
         },
-        // Use cache-busting to get the most recent list of domains
+        
         next: { revalidate: 0 }
     });
 
@@ -32,7 +32,7 @@ export async function POST(req: NextRequest) {
     const domains = await domainResponse.json();
     console.log("Successfully fetched domains.");
 
-    // Use the first available domain from the list
+    
     const domain = domains["hydra:member"]?.[0]?.domain;
     if (!domain) {
       console.error("No domains found in the response:", domains);
@@ -41,13 +41,13 @@ export async function POST(req: NextRequest) {
     console.log("Using domain:", domain);
 
 
-    // 2. Generate random credentials for the new email address
+   
     const randomId = Math.random().toString(36).substring(2, 12);
     const address = `${randomId}@${domain}`;
     const password = Math.random().toString(36).substring(2, 20);
     console.log("Generated new address:", address);
 
-    // 3. Create a new email account using the mail.tm API
+   
     console.log("Creating account on mail.tm...");
     const accountResponse = await fetch("https://api.mail.tm/accounts", {
       method: "POST",
@@ -65,10 +65,8 @@ export async function POST(req: NextRequest) {
     }
     console.log("Account created successfully.");
 
-    // Add a small delay to ensure the account is propagated on the mail.tm servers
-    await delay(1000); // Wait for 1 second
-
-    // 4. Log in to the newly created account to get an authentication JWT token
+ 
+    await delay(1000); 
     console.log("Fetching authentication token...");
     const tokenResponse = await fetch("https://api.mail.tm/token", {
       method: "POST",
@@ -88,7 +86,7 @@ export async function POST(req: NextRequest) {
     const { token } = await tokenResponse.json();
     console.log("Successfully fetched token.");
 
-    // 5. Return the new email address and the auth token to the client
+    
     return NextResponse.json({ address, token }, { status: 200 });
   } catch (err) {
     console.error("Error in /api/tempmail/create:", err);

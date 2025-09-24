@@ -1,0 +1,20 @@
+{
+  "manifest_version": 3,
+  "name": "SafetyFirst",
+  "version": "1.0",
+  "description": "Blocks access to known malicious and phishing websites to keep you safe.",
+  "permissions": ["webNavigation", "storage", "alarms", "tabs"],
+  "host_permissions": ["http://data.phishtank.com/"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_title": "Safe Surf is active"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["blocked.html", "styles.css"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}

@@ -1,13 +1,12 @@
 import { NextResponse } from "next/server"
 
-// In a real app, replace this with a DB connection (MongoDB, PostgreSQL, etc.)
+
 const reports: {
   url: string
   reason: string
   createdAt: string
 }[] = []
 
-// Handle POST (submit a new report)
 export async function POST(req: Request) {
   try {
     const body = await req.json()
@@ -31,7 +30,6 @@ export async function POST(req: Request) {
   }
 }
 
-// Handle GET (retrieve all reports) – optional for admin dashboard
 export async function GET() {
   return NextResponse.json({ reports })
 }

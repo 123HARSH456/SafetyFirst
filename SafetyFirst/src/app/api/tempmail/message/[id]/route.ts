@@ -6,7 +6,7 @@ export async function GET(
   req: Request,
   context: { params: Promise<{ id: string }> }
 ) {
-  const { id } = await context.params; // ✅ must await
+  const { id } = await context.params; 
 
   const token = req.headers.get("authorization");
   if (!token) {
